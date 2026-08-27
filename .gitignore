@@ -1,0 +1,22 @@
+# Simulation build products
+sim/*.vvp
+sim/*.vcd
+fpga/kc705/sim/*.vvp
+fpga/kc705/sim/*.vcd
+
+# Vivado generated files
+.Xil/
+fpga/kc705/build/
+fpga/kc705/reports/
+*.jou
+*.pb
+*.wdb
+*.dcp
+*.bit
+*.ltx
+
+# Keep text logs that document repeatable simulations.
+!sim/compile.log
+!sim/simulation.log
+!fpga/kc705/sim/compile.log
+!fpga/kc705/sim/simulation.log

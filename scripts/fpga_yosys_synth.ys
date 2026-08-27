@@ -1,0 +1,19 @@
+# Generic synthesis pre-check. This does not replace the P1/Fuxi implementation flow.
+read_verilog -sv rtl/cache_sram_tdp.sv
+read_verilog -sv rtl/axi_cache_slave_port.sv
+read_verilog -sv rtl/axi_master_engine.sv
+read_verilog -sv rtl/cache_core.sv
+read_verilog -sv rtl/axi_l2_cache.sv
+
+hierarchy -check -top axi_l2_cache
+proc
+opt
+memory_dff
+memory_collect
+opt
+check
+
+tee -o reports/yosys_stat.rpt stat
+write_verilog -noattr reports/axi_l2_cache_generic_netlist.v
+write_json reports/axi_l2_cache_generic.json
+
