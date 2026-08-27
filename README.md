@@ -1,6 +1,6 @@
 # AXICache
 
-面向中国研究生创“芯”大赛“基于 AXI 总线接口的二级 Cache 设计”赛题的 SystemVerilog 实现。
+基于 AXI 总线接口的二级 Cache 设计”赛题的 SystemVerilog 实现。
 
 ## 当前状态
 
